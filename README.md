@@ -17,3 +17,5 @@ grauEmCelsius = conversor
         .para(TemperaturaEnum.CELSIUS) // ........ para CELSIUS
         .calcular(); // .......................... Calcula e obtém o resultado em Float.
 ```
+
+[Clique aqui para visualizar meu currículo](https://brunocarneiro312.github.io)
