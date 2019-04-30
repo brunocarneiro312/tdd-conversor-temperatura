@@ -96,14 +96,14 @@ public class ConversorImplTest {
         ConversorImpl conversor = new ConversorImpl();
 
         // when
-        Float grauEmKelvin = conversor
+        Float grauEmCelsius = conversor
                 .converter(100F)
                 .de(TemperaturaEnum.KELVIN)
                 .para(TemperaturaEnum.CELSIUS)
                 .calcular();
 
         // then
-        Assert.assertEquals(new Float(-173.15), grauEmKelvin);
+        Assert.assertEquals(new Float(-173.15), grauEmCelsius);
 
     }
 
@@ -114,14 +114,14 @@ public class ConversorImplTest {
         ConversorImpl conversor = new ConversorImpl();
 
         // when
-        Float grauEmKelvin = conversor
+        Float grauEmFahreinheit = conversor
                 .converter(100F)
                 .de(TemperaturaEnum.KELVIN)
                 .para(TemperaturaEnum.FAHRENHEIT)
                 .calcular();
 
         // then
-        Assert.assertEquals(new Float(-279.67), grauEmKelvin);
+        Assert.assertEquals(new Float(-279.67), grauEmFahreinheit);
 
     }
 
@@ -149,18 +149,18 @@ public class ConversorImplTest {
 
         // given
         Conversor conversor = new ConversorImpl();
-        Float grauEmFahreinheit;
+        Float grauEmKelvin;
 
         // when
-        grauEmFahreinheit = conversor
+        grauEmKelvin = conversor
                 .converter(100F)
                 .de(TemperaturaEnum.FAHRENHEIT)
                 .para(TemperaturaEnum.KELVIN)
                 .calcular();
 
         // then
-        Assert.assertNotNull(grauEmFahreinheit);
-        Assert.assertEquals(new Float(310.93), grauEmFahreinheit);
+        Assert.assertNotNull(grauEmKelvin);
+        Assert.assertEquals(new Float(310.93), grauEmKelvin);
     }
 
     @Test
@@ -168,18 +168,18 @@ public class ConversorImplTest {
 
         // given
         Conversor conversor = new ConversorImpl();
-        Float grauEmFahreinheit;
+        Float grauEmCelsius;
 
         // when
-        grauEmFahreinheit = conversor
+        grauEmCelsius = conversor
                 .converter(100F)
                 .de(TemperaturaEnum.FAHRENHEIT)
                 .para(TemperaturaEnum.CELSIUS)
                 .calcular();
 
         // then
-        Assert.assertNotNull(grauEmFahreinheit);
-        Assert.assertEquals(new Float(37.78), grauEmFahreinheit);
+        Assert.assertNotNull(grauEmCelsius);
+        Assert.assertEquals(new Float(37.78), grauEmCelsius);
 
     }
 }
