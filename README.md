@@ -12,8 +12,8 @@
 
 ```
 grauEmCelsius = conversor
-                .converter(100F) // ...................... Converter 100
-                .de(TemperaturaEnum.FAHRENHEIT) // ....... graus FAHRENHEIT
-                .para(TemperaturaEnum.CELSIUS) // ........ para CELSIUS
-                .calcular(); // .......................... Calcula e obtém o resultado em Float.
+        .converter(100F) // ...................... Converter 100
+        .de(TemperaturaEnum.FAHRENHEIT) // ....... graus FAHRENHEIT
+        .para(TemperaturaEnum.CELSIUS) // ........ para CELSIUS
+        .calcular(); // .......................... Calcula e obtém o resultado em Float.
 ```
