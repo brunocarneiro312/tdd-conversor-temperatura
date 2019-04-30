@@ -17,9 +17,9 @@ public class ConversorImpl implements Conversor {
     private TemperaturaEnum escalaOrigem;
     private TemperaturaEnum escalaDestino;
 
-    static String CELSIUS = "CELSIUS";
-    static String KELVIN = "KELVIN";
-    static String FAHRENHEIT = "FAHRENHEIT";
+    static final String CELSIUS = "CELSIUS";
+    static final String KELVIN = "KELVIN";
+    static final String FAHRENHEIT = "FAHRENHEIT";
 
     public Conversor converter(Float grau) {
         setGrau(grau);
