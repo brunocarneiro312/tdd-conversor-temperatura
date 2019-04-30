@@ -18,4 +18,4 @@ grauEmCelsius = conversor
         .calcular(); // .......................... Calcula e obtém o resultado em Float.
 ```
 
-[Clique aqui para visualizar meu currículo](https://brunocarneiro312.github.io)
+<small>[Clique aqui para visualizar meu currículo](https://brunocarneiro312.github.io)</small>
