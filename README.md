@@ -1,3 +1,6 @@
+![alt java-logo](https://i2.wp.com/techpursue.com/wp-content/uploads/2016/10/java-logo-vector-200x200-1.png?ssl=1)
+![alt java-logo](https://www.opencodez.com/wp-content/uploads/2019/04/Junit-1.png)
+![alt java-logo](https://librariesio.github.io/pictogram/maven/maven.png)
 # Conversor de temperaturas
 ### Simples conversor de temperaturas utilizando a abordagem de desenvolvimento TDD.
 #### Converte:
