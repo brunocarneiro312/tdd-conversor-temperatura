@@ -1,6 +1,7 @@
 package br.com.service;
 
 import br.com.enumeration.TemperaturaEnum;
+import br.com.exceptions.ErroDeConversaoException;
 
 public interface Conversor {
 
@@ -10,6 +11,6 @@ public interface Conversor {
 
     Conversor para(TemperaturaEnum escalaDestino);
 
-    Float calcular();
+    Float calcular() throws ErroDeConversaoException;
 
 }

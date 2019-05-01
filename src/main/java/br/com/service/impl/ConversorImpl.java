@@ -1,6 +1,7 @@
 package br.com.service.impl;
 
 import br.com.enumeration.TemperaturaEnum;
+import br.com.exceptions.ErroDeConversaoException;
 import br.com.service.Conversor;
 
 import java.math.BigDecimal;
@@ -63,7 +64,7 @@ public class ConversorImpl implements Conversor {
      * -------------------------------------------------------------
      * @return Valor convertido
      */
-    public Float calcular() {
+    public Float calcular() throws ErroDeConversaoException {
 
         // Se for a mesma escala, retorna grau.
         if (getEscalaOrigem().toString() == getEscalaDestino().toString()) {
@@ -108,7 +109,9 @@ public class ConversorImpl implements Conversor {
             }
         }
 
-        return 0F;
+        throw new ErroDeConversaoException("Erro durante a conversão de temperatura. ["
+                + getEscalaOrigem().toString() +" -> "
+                + getEscalaDestino().toString()+ "]");
     }
 
     /**
