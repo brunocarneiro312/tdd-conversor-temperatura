@@ -21,21 +21,48 @@ public class ConversorImpl implements Conversor {
     static final String KELVIN = "KELVIN";
     static final String FAHRENHEIT = "FAHRENHEIT";
 
+    /**
+     * -----------------------------
+     * Recebe valor a ser convertido
+     * -----------------------------
+     * @param grau
+     * @return this
+     */
     public Conversor converter(Float grau) {
         setGrau(grau);
         return this;
     }
 
+    /**
+     * -----------------------------
+     * Especifica a escala de origem
+     * -----------------------------
+     * @param escala
+     * @return this
+     */
     public ConversorImpl de(TemperaturaEnum escala) {
         setEscalaOrigem(escala);
         return this;
     }
 
+    /**
+     * ------------------------------
+     * Especifica a escala de destino
+     * ------------------------------
+     * @param escala
+     * @return this
+     */
     public ConversorImpl para(TemperaturaEnum escala) {
         setEscalaDestino(escala);
         return this;
     }
 
+    /**
+     * -------------------------------------------------------------
+     * Realiza o conversão da escala de origem para a escala destino
+     * -------------------------------------------------------------
+     * @return Valor convertido
+     */
     public Float calcular() {
 
         // Se for a mesma escala, retorna grau.
