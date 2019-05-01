@@ -90,31 +90,37 @@ public class ConversorImpl implements Conversor {
      * ========
      */
     private Float celsiusParaKelvin(Float grauEmCelcius) {
-        return grauEmCelcius + 273.15F;
+        BigDecimal result = new BigDecimal(grauEmCelcius + 273.15F);
+        result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
+        return result.floatValue();
     }
 
     private Float celsiusParaFahrenheit(Float grauEmCelsius) {
-        return (grau * 9/5 + 32);
+        BigDecimal result = new BigDecimal(grauEmCelsius * 9/5 + 32);
+        result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
+        return result.floatValue();
     }
 
     private Float kelvinParaCelsius(Float grauEmKelvin) {
-        return grau - 273.15F;
+        BigDecimal result = new BigDecimal(grauEmKelvin - 273.15F);
+        result.setScale(2, BigDecimal.ROUND_HALF_UP);
+        return grauEmKelvin - 273.15F;
     }
 
     private Float kelvinParaFahreinheit(Float grauEmKelvin) {
-        BigDecimal result = new BigDecimal((grau - 273.15F) * 9/5 + 32);
+        BigDecimal result = new BigDecimal((grauEmKelvin - 273.15F) * 9/5 + 32);
         result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
         return result.floatValue();
     }
 
     private Float fahreinheitParaCelsius(Float grauEmFahreinheit) {
-        BigDecimal result = new BigDecimal((grau - 32) * 5/9);
+        BigDecimal result = new BigDecimal((grauEmFahreinheit - 32) * 5/9);
         result = result.setScale(2, BigDecimal.ROUND_UP);
         return result.floatValue();
     }
 
     private Float fahreinheitParaKelvin(Float grauEmFahreinheit) {
-        BigDecimal result = new BigDecimal((grau - 32) * 5/9 + 273.15F);
+        BigDecimal result = new BigDecimal((grauEmFahreinheit - 32) * 5/9 + 273.15F);
         result = result.setScale(2, BigDecimal.ROUND_HALF_UP);
         return result.floatValue();
     }
