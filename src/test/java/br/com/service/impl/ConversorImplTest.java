@@ -1,7 +1,6 @@
 package br.com.service.impl;
 
 import br.com.enumeration.TemperaturaEnum;
-import br.com.exceptions.ErroDeConversaoException;
 import br.com.service.Conversor;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +13,7 @@ import org.junit.Test;
 public class ConversorImplTest {
 
     @Test
-    public void converterDeCelciusParaCelcius() throws ErroDeConversaoException {
+    public void converterDeCelciusParaCelcius() {
 
         // given
         Conversor conversor = new ConversorImpl();
@@ -33,7 +32,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeCelciusParaKelvin() throws ErroDeConversaoException {
+    public void converterDeCelciusParaKelvin() {
 
         // given
         Conversor conversor = new ConversorImpl();
@@ -53,7 +52,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeCelciusParaFahrenheit() throws ErroDeConversaoException {
+    public void converterDeCelciusParaFahrenheit() {
 
         // given
         Conversor conversor = new ConversorImpl();
@@ -73,7 +72,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeKelvinParaKelvin() throws ErroDeConversaoException {
+    public void converterDeKelvinParaKelvin() {
 
         // given
         ConversorImpl conversor = new ConversorImpl();
@@ -91,7 +90,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeKelvinParaCelcius() throws ErroDeConversaoException {
+    public void converterDeKelvinParaCelcius() {
 
         // given
         ConversorImpl conversor = new ConversorImpl();
@@ -109,7 +108,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeKelvinParaFahrenheit() throws ErroDeConversaoException {
+    public void converterDeKelvinParaFahrenheit() {
 
         // given
         ConversorImpl conversor = new ConversorImpl();
@@ -127,7 +126,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeFahrenheitParaFahrenheit() throws ErroDeConversaoException {
+    public void converterDeFahrenheitParaFahrenheit() {
 
         // given
         Conversor conversor = new ConversorImpl();
@@ -146,7 +145,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeFarenheitParaKelvin() throws ErroDeConversaoException {
+    public void converterDeFarenheitParaKelvin() {
 
         // given
         Conversor conversor = new ConversorImpl();
@@ -165,7 +164,7 @@ public class ConversorImplTest {
     }
 
     @Test
-    public void converterDeFahrenheitParaCelcius() throws ErroDeConversaoException {
+    public void converterDeFahrenheitParaCelcius() {
 
         // given
         Conversor conversor = new ConversorImpl();
